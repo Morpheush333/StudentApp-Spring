@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+</head>
+<body>
+
+<ul>
+    <li th:each="student : ${students}">
+        <a href="/students/1"
+           th:href="'/students/' + ${student.id}"
+           th:texr="${student.FullName}">firstName lastName</a>
+    </li>
+</ul>
+
+<form action="/students" method="post">
+
+    First name<input type="text" name="firstName">
+
+    <br/>
+
+    Last name<input type="text" name="lastName">
+
+    <br/>
+
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
